@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Create a new Sequelize model for books
-class Gender extends Model {}
+class Pronoun extends Model {}
 
-Gender.init(
+Pronoun.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,9 +18,9 @@ Gender.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'gender'
+    modelName: 'pronoun'
   }
 
 );
 
-module.exports = Gender;
+module.exports = Pronoun;

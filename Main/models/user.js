@@ -20,6 +20,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -39,7 +43,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gender_id: {
+    preferred_pronoun: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -48,10 +52,10 @@ User.init(
       allowNull: true,
     },
     dating_or_friendship: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    interested_in_gender: {
+    looking_for_pl_with_pronoun: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -61,7 +65,7 @@ User.init(
     },
     willing_to_grab_a_pint: {
       type: DataTypes.BOOLEAN,
-    }
+    },
 
   },
   {
