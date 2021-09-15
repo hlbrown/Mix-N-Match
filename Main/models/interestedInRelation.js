@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const InterestedInGender = require('./interestedInGender');
+const InterestedInGender = require('./interestedInPronoun');
 
 // Create a new Sequelize model for books
 class interestedInRelation extends Model {}
