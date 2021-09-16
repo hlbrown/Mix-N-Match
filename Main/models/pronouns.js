@@ -19,7 +19,7 @@ Pronoun.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'pronoun'
+    modelName: 'pronouns'
   }
 
 );

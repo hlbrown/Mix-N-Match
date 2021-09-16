@@ -55,18 +55,20 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    looking_for_pl_with_pronoun: {
+    interested_in: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    beer_preference: {
+    beers_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     willing_to_grab_a_pint: {
       type: DataTypes.BOOLEAN,
     },
-
+    matched: {
+        type: DataTypes.BOOLEAN,
+    },
   },
   {
     hooks: {
