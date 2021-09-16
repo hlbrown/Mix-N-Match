@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const InterestedInGender = require('./interestedInPronoun');
+// const InterestedInPronoun = require('./interestedInPronoun');
 
 // Create a new Sequelize model for books
 class interestedInRelation extends Model {}
@@ -10,6 +10,7 @@ interestedInRelation.init(
     id: {
         type: DataTypes.INTEGER,
         autoIncrement:true,
+        primaryKey:true,
       },
       user_id: {
           type: DataTypes.INTEGER,

@@ -9,6 +9,7 @@ InterestedInPronoun.init(
     id: {
       type: DataTypes.INTEGER,
       autoIncrement:true,
+      primaryKey:true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -29,7 +30,7 @@ InterestedInPronoun.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'interestedInpronoun'
+    modelName: 'interestedInPronoun'
   }
 );
 

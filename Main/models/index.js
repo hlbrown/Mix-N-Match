@@ -1,19 +1,19 @@
 // const Conversations = require('../models/conversations');
 // const Matches = require('./matches');
-const InterestedInGender = require('./interestedInPronoun');
-const Gender = require('./pronoun');
+const InterestedInPronoun = require('./interestedInPronoun');
+const Pronoun = require('./pronoun');
 const InterestedInRelation = require('./interestedInRelation');
 const RelationshipType = require('./relationshipType');
 const User = require('./user');
-const Beers = require('./beer');
+const Beers = require('./beers');
 const FavoriteBeer = require('./favoriteBeer');
 const Photo = require('./photo');
 
-Gender.belongsTo(User, {
+Pronoun.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-InterestedInGender.belongsTo(User, {
+InterestedInPronoun.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
@@ -30,7 +30,7 @@ InterestedInRelation.belongsTo(User, {
   foreignKey: 'relationshipType_id',
 });
 
-Beers.hasMany(User, {
+Beers.belongsToMany(User, {
   through: {
     model: FavoriteBeer,
     unique: false,
@@ -66,8 +66,8 @@ User.belongsToMany(User, {
 
 module.exports = {
   User,
-  Gender,
-  InterestedInGender,
+  Pronoun,
+  InterestedInPronoun,
   InterestedInRelation,
   RelationshipType,
   Beers,
