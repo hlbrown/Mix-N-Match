@@ -37,5 +37,57 @@
     "interested_in": "She/Her",
     "beers_name": "American Lager",
     "willing_to_grab_a_pint": "true"
+  },
+  {
+    "first_name": "Mary",
+    "last_name": "David",
+    "email": "maryD@unca.edu",
+    "password": "maryDav123",
+    "city": "Apex",
+    "preferred_pronoun": "She",
+    "hobbies": "swimming, hiking, gym, family",
+    "dating_or_friendship": "dating",
+    "interested_in": "They/Them",
+    "beers_name": "IPA",
+    "willing_to_grab_a_pint": "true"
+  },
+  {
+    "first_name": "Bobby",
+    "last_name": "Bones",
+    "email": "bobbyBones@unca.edu",
+    "password": "bobbybones78",
+    "city": "Wichita",
+    "preferred_pronoun": "He",
+    "hobbies": "petting dogs, music, dance",
+    "dating_or_friendship": "dating",
+    "interested_in": "She/Her",
+    "beers_name": "American Lager",
+    "willing_to_grab_a_pint": "true"
+  },
+  {
+    "first_name": "Zara",
+    "last_name": "Nagle",
+    "email": "Zmkkenzie@aol.cpm",
+    "password": "clearlyF@ke",
+    "city": "Raleigh",
+    "preferred_pronoun": "She",
+    "hobbies": "petting dogs, eating pizza, tiktok",
+    "dating_or_friendship": "friendship",
+    "interested_in": "He/Him",
+    "beers_name": "American Lager",
+    "willing_to_grab_a_pint": "true"
+  },
+  {
+    "first_name": "Rykeir",
+    "last_name": "Wayne",
+    "email": "waynesWorld@yahoo.com",
+    "password": "notR3@l13",
+    "city": "Raleigh",
+    "preferred_pronoun": "He",
+    "hobbies": "Fornite, eating pizza, hanging out",
+    "dating_or_friendship": "friendship",
+    "interested_in": "She/Her",
+    "beers_name": "",
+    "willing_to_grab_a_pint": "true"
   }
 ]
