@@ -9,6 +9,7 @@ Photo.init(
     id: {
       type: DataTypes.INTEGER,
       autoIncrement:true,
+      primaryKey:true,
     },
     user_id: {
         type: DataTypes.INTEGER,
@@ -17,9 +18,9 @@ Photo.init(
           key: 'id',
         },
     },
-    link: {
-        type: DataTypes.LINK,
-    }
+    // link: {
+    //     type: DataTypes.
+    // }
   },
   {
     sequelize,

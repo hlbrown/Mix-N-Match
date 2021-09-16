@@ -8,6 +8,7 @@ FavoriteBeer.init(
   {
     id: {
         type: DataTypes.INTEGER,
+        primaryKey:true,
       },
       user_id: {
           type: DataTypes.INTEGER,
