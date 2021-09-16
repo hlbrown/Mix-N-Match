@@ -19,7 +19,7 @@ RelationshipType.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'relationshipType'
+    modelName: 'relationshipTypes'
   }
 );
 

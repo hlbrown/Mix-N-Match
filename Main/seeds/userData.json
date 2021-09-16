@@ -1,3 +1,41 @@
-{
-    
-}
+[
+  {
+    "first_name": "Daniel",
+    "last_name": "Bradley",
+    "email": "danielbvideo@gmail.com",
+    "password": "helloworld123",
+    "city": "Asheville",
+    "preferred_pronoun": "He",
+    "hobbies": "rollerblading, photography, havin a good time",
+    "dating_or_friendship": "dating",
+    "interested_in": "She/Her",
+    "beers_name": "American Lager",
+    "willing_to_grab_a_pint": "true"
+  },
+  {
+    "first_name": "Emily",
+    "last_name": "Bradley",
+    "email": "emilyb@aol.com",
+    "password": "asheville2345",
+    "city": "Asheville",
+    "preferred_pronoun": "She",
+    "hobbies": "photography, hiking, drinking",
+    "dating_or_friendship": "dating",
+    "interested_in": "He/Him",
+    "beers_name": "IPA",
+    "willing_to_grab_a_pint": "true"
+  },
+  {
+    "first_name": "Clare",
+    "last_name": "Higgins",
+    "email": "clareH@unca.edu",
+    "password": "funpony987",
+    "city": "Asheville",
+    "preferred_pronoun": "She",
+    "hobbies": "petting dogs, eating pizza, having fun",
+    "dating_or_friendship": "dating",
+    "interested_in": "She/Her",
+    "beers_name": "American Lager",
+    "willing_to_grab_a_pint": "true"
+  }
+]
