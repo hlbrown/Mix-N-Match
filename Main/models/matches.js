@@ -24,7 +24,7 @@ Matches.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'beers'
+    modelName: 'matches'
   }
 
 );
