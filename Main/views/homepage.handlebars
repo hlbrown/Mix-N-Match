@@ -1,0 +1,19 @@
+<!-- Loop over each object in the projects array -->
+<p>HELLO</p>
+
+{{#each users as |user| }}
+<div class="row mb-4 project">
+    <div class="col-md-5">
+        <h2>
+            <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+            <a href="/user/{{user.id}}">{{user.first_name}}</a>
+        </h2>
+    </div>
+    <div class="col-md-7">
+        <p>
+            {{user.preferred_pronoun}}
+            {{user.beers_name}}
+        </p>
+    </div>
+</div>
+{{/each}}
