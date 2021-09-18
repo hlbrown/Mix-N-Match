@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
 
    try {
     const dbUserData = await User.create({
@@ -9,6 +9,7 @@ router.post('/', async (req, res) => {
       last_name: req.body.last_name,
       email: req.body.email,
       password: req.body.password,
+      age: req.body.age,
       city: req.body.city,
       preferred_pronoun: req.body.preferred_pronoun,
       hobbies: req.body.hobbies,

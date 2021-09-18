@@ -5,7 +5,8 @@
        const first_name = document.querySelector('#first_name-signup').value.trim();
        const last_name = document.querySelector('#last_name-signup').value.trim();
        const email = document.querySelector('#email-signup').value.trim();
-       const password = document.querySelector('#password-signup').value.trim();
+     const password = document.querySelector('#password-signup').value.trim();
+     const age = document.querySelector('#age-signup').value.trim();
        const city = document.querySelector('#city-signup').value.trim();
        const preferred_pronoun = document.querySelector('#preferred_pronoun-signup').value.trim();
        const hobbies = document.querySelector('#hobbies-signup').value.trim();
@@ -16,10 +17,10 @@
      const matched = document.querySelector('#matched-signup').value.trim();
 
 
-     if (first_name && last_name && email && password && city && preferred_pronoun && hobbies && dating_or_friendship && interested_in && beers_name && willing_to_grab_a_pint && matched) {
+     if (first_name && last_name && email && password && age && city && preferred_pronoun && hobbies && dating_or_friendship && interested_in && beers_name && willing_to_grab_a_pint && matched) {
          const response = await fetch('/api/user/signup', {
              method: 'POST',
-             body: JSON.stringify({ first_name, last_name, email, password, city, preferred_pronoun, hobbies, dating_or_friendship, interested_in, beers_name, willing_to_grab_a_pint, matched }),
+             body: JSON.stringify({ first_name, last_name, email, password, age, city, preferred_pronoun, hobbies, dating_or_friendship, interested_in, beers_name, willing_to_grab_a_pint, matched }),
              headers: { 'Content-Type': 'application/json' },
          });
 
