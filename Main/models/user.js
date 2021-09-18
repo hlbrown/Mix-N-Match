@@ -39,6 +39,10 @@ User.init(
         len: [15],
       },
     },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     city: {
       type: DataTypes.STRING,
       allowNull: false,
