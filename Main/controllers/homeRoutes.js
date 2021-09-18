@@ -80,6 +80,9 @@ router.get('/profile', withAuth, async (req, res) => {
   console.log("login")
     res.render('login');
   });
+router.get('/signup', (req, res) => {
+  console.log("signup")
+  res.render('signup');
+});
 
   module.exports = router;
-
