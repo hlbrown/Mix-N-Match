@@ -77,21 +77,12 @@ router.get('/profile', withAuth, async (req, res) => {
 
   
   router.get('/login', (req, res) => {
-<<<<<<< HEAD
-    // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/profile');
-      return;
-    }
-  
-=======
   console.log("login")
->>>>>>> 2f4aa88f06bc2fb6ea0aada5a61778764a020000
     res.render('login');
   });
+router.get('/signup', (req, res) => {
+  console.log("signup")
+  res.render('signup');
+});
 
   module.exports = router;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2f4aa88f06bc2fb6ea0aada5a61778764a020000
