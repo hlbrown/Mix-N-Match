@@ -2,38 +2,31 @@ const router = require('express').Router();
 const { Matches, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  res.render('homepage', {
-    users,
-    logged_in: req.seesion.logged_in
-  });
-})
+router.get('/',  withAuth, async (req, res) => {
+  try {
+    // Get all matches and JOIN with user data
+    const userData = await User.findAll({
+      // include: [
+      //   {
+      //     model: User,
+      //     attributes: ['first_name', 'city', 'hobbies', 'preferred_pronoun', 'beers_name'],
+      //   },
+      // ],
+    });
 
-//router.get('/', async (req, res) => {
-//  try {
-//    // Get all projects and JOIN with user data
-//    const matchesData = await Matches.findAll({
-//    //   include: [
-//    //     {
-//    //       model: User,
-//    //       attributes: ['name'],
-//    //     },
-//    //   ],
-//    });
-//
-//    // Serialize data so the template can read it
-//    const matches = matchesData.map((matches) => matches.get({ plain: true }));
-//
-//    // Pass serialized data and session flag into template
-//    res.render('homepage', { 
-//      profiles, 
-//      logged_in: req.session.logged_in 
-//    });
-//  } catch (err) {
-//    res.status(500).json(err);
-//  }
-//});
-//
+    // Serialize data so the template can read it
+    const users = userData.map((user) => user.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      users, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 
 router.get('/matches/:id', async (req, res) => {
@@ -84,13 +77,21 @@ router.get('/profile', withAuth, async (req, res) => {
 
   
   router.get('/login', (req, res) => {
+<<<<<<< HEAD
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
       res.redirect('/profile');
       return;
     }
   
+=======
+  console.log("login")
+>>>>>>> 2f4aa88f06bc2fb6ea0aada5a61778764a020000
     res.render('login');
   });
 
   module.exports = router;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2f4aa88f06bc2fb6ea0aada5a61778764a020000
