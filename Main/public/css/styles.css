@@ -51,7 +51,7 @@ header {
 .welcome_info {
   font-size: medium;
   font-family: "Work Sans", sans-serif;
-  margin-top: 25%;
+  margin-top: 5%;
 }
 
 /* footer */
@@ -140,4 +140,55 @@ q {
 /* Add a blue color to the author */
 .author {
   color: cornflowerblue;
+}
+
+.matches_container {
+  padding: 2%;
+  margin: 2%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.match {
+  width: 40%;
+  background-color: rgb(44, 29, 1);
+  color: rgb(170, 111, 2);
+}
+.match_name {
+  margin-top: 0;
+  font-size: 2.4em;
+  padding: 3%;
+  font-weight: normal;
+}
+span {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 3%;
+}
+.beer_preference {
+  padding: 3%;
+}
+.pronoun {
+  font-size: 1.45rem;
+  color: #999;
+}
+.request_btn {
+  padding-left: 50%;
+}
+.hobbies {
+  margin: 0;
+  background-color: #ccc;
+  padding: 8px 15px;
+}
+.hobbies_list {
+  background-color: #EFEFEF;
+  padding: 0;
+  margin: 0;
+}
+.hobbies_list li {
+  list-style: none;
+  border-bottom: 1px dotted #999;
+  padding: 8px 15px;
+  font-size: 0.85rem;
 }

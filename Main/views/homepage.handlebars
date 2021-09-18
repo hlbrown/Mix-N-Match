@@ -1,19 +1,24 @@
 <!-- Loop over each object in the projects array -->
-<p>HELLO</p>
+
 
 {{#each users as |user| }}
-<div class="row mb-4 project">
-    <div class="col-md-5">
-        <h2>
-            <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-            <a href="/user/{{user.id}}">{{user.first_name}}</a>
-        </h2>
-    </div>
-    <div class="col-md-7">
-        <p>
-            {{user.preferred_pronoun}}
-            {{user.beers_name}}
-        </p>
+<div class="matches_container">
+<div class="match">
+    <div class="match_name">
+        <h1>{{user.first_name}}</h1>
+        <span class="pronoun">{{user.preferred_pronoun}}</span>
+        <span class="age"><strong>{{user.age}}</strong></span>
+<h3 class="beer_preference">{{user.beers_name}}</h3>
+        <h4 class="hobbies">Hobbies: {{user.hobbies}}</h4>
+        <ul class="hobbies_list">
+            {{#each user.user_hobbies}}
+            <li>
+                {{{this}}}
+            </li>
+            {{/each}}
+        </ul>
     </div>
 </div>
+</div>
 {{/each}}
+
