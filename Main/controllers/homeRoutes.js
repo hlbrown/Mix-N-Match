@@ -12,7 +12,9 @@ router.get('/', withAuth, async (req, res) => {
     console.log(currUser)
     //console.log(currentUser);
     const userData = await User.findAll({
-      where: { beers_name: currUser.beers_name }
+      where: { beers_name: currUser.beers_name, interested_in: currUser.interested_in }
+    
+        
       // include: [
       //   {
       //     model: User,

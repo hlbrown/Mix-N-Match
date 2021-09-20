@@ -1,11 +1,12 @@
 <!-- Loop over each object in the projects array -->
 
 
-{{#each users as |user| }}
+
 <div class="matches_container">
 
-        <div class="match">
-            <div class="match_name ">
+        <div class="match row row-cols-1 row-cols-md-2">
+            {{#each users as |user| }}
+            <div class="match_name card ">
                 <h1 class="card-title">{{user.first_name}}</h1>
                  <span class="age"><strong>{{user.age}}</strong></span>
                  <span class="pronoun">{{user.preferred_pronoun}}</span>
@@ -18,9 +19,10 @@
                         </li>
                         {{/each}}
                      </ul>
-                </div ><!--ending div match_name-->
+                </div >
+                {{/each}}<!--ending div match_name-->
         </div><!--ending div match card-->
      
-</div><!---ending div for container->
-{{/each}}
+</div><!---ending div for container-->
+
 

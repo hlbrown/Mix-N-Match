@@ -13,7 +13,9 @@
     <title>MixNMatch</title>
 </head>
 <body>
-    <header class="primaryHeader">
+
+<div class="flex-column justify-space-around">
+    <header class="primaryHeader display-flex justify-space-between align-center p-2">
         <button class="log_in primary" onclick="location.href='/login'">Log in</button>
         <button class="signup primary" onclick="location.href='/signup'">Sign up</button>
     </header>
@@ -28,38 +30,32 @@
                 </div>
         </header>        
         {{/if}}
-
-    <main>
-         <div class="container-sm title">Mix n Match
-             <div class="reviews">
+    <main class="container container-fluid mt-5">
+         <div class="jumbotron">
+             <h1 class="display-4">Mix n Match</h1>       
              
-                        <marquee class="welcome_info container-sm">
+                        <marquee class="welcome_info lead">
                             Join today to get in touch with your future drinking buddies!
-                        </marquee>
-
-                    <div class="info_pic container-sm">
-                    
-                        {{{ body }}}
+                        </marquee>           
+                    <div>
+                        {{{ body }}}        
                     </div>
+             </div>          
 
-             </div>
-         </div>   
+          
+  
+
     </main>
-   
-<footer class="footer">
-    <div class="container">
-           <div class="row">
-               <div class="col-sm-12 col-med-6 col-lg-3">
-                    About | Contact | FAQ
-               </div>
-           </div> 
-    </div>
+    <footer class=" container-fluid footer mt-auto fixed-bottom">
+        mix|match\yadayada
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>   
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
 {{/if}}
+
+</div>
 </body>
 </html>
 

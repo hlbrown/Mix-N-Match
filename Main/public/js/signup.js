@@ -13,14 +13,13 @@
        const dating_or_friendship = document.querySelector('#dating_friendship-signup').value.trim();
        const interested_in = document.querySelector('#interested_in-signup').value.trim();
        const beers_name = document.querySelector('#beers_name-signup').value.trim();
-     const willing_to_grab_a_pint = document.querySelector('#grab_pint-signup').value.trim();
-     const matched = document.querySelector('#matched-signup').value.trim();
 
 
-     if (first_name && last_name && email && password && age && city && preferred_pronoun && hobbies && dating_or_friendship && interested_in && beers_name && willing_to_grab_a_pint && matched) {
+
+     if (first_name && last_name && email && password && age && city && preferred_pronoun && hobbies && dating_or_friendship && interested_in && beers_name ) {
          const response = await fetch('/api/user/signup', {
              method: 'POST',
-             body: JSON.stringify({ first_name, last_name, email, password, age, city, preferred_pronoun, hobbies, dating_or_friendship, interested_in, beers_name, willing_to_grab_a_pint, matched }),
+             body: JSON.stringify({ first_name, last_name, email, password, age, city, preferred_pronoun, hobbies, dating_or_friendship, interested_in, beers_name}),
              headers: { 'Content-Type': 'application/json' },
          });
 
