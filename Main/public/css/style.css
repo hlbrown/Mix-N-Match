@@ -1,0 +1,61 @@
+body,
+html {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  display: flex;
+  flex-direction: row-reverse;
+ /* justify-content: space-between;*/
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  background-color: rgba(108, 71, 24);
+}
+main{
+    background-image: url("images/istockphoto-1125087566-612x612.jpeg");
+  height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Buttons */
+.banner_btn {
+  border-radius: 25px;
+}
+.banner_btn:hover {
+  background: gray;
+  color: white;
+}
+.log_in {
+  margin: 5px;
+}
+.signup{
+  margin: 5px;
+}
+
+.title {
+  height: 75%;
+  margin: 5%;
+  margin-right: 40%;
+  text-align: center;
+  font-size: xx-large;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 65%;
+}
+.footer{
+  position: relative;
+  border: 4px solid black;
+  height:3em;
+  align-items: center;
+}
+/*card styles for possible matches*/
+.card{
+  width: 18rem;
+ 
+}
+
+

@@ -2,10 +2,17 @@ const router = require('express').Router();
 const { Matches, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/',  withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
+  console.log(req.session.user_id);
+  
   try {
     // Get all matches and JOIN with user data
+    const currentUser = await User.findOne({ where: { id: req.session.user_id } });
+    const currUser = currentUser.get({ plain: true });
+    console.log(currUser)
+    //console.log(currentUser);
     const userData = await User.findAll({
+      where: { beers_name: currUser.beers_name }
       // include: [
       //   {
       //     model: User,
