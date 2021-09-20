@@ -37,6 +37,7 @@ header {
 }
 .jumbotron{
   background: cornsilk;
+  border-radius: 10px;
 }
 
 .title {
@@ -62,4 +63,78 @@ footer{
   height: 100px;
   background-color: rgba(119, 88, 22, 0.748);
 }
+
+.match {
+  /* background-color: rgb(44, 29, 1);
+  color: rgb(170, 111, 2); */
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.name_photo {
+  display: flex;
+  align-items: center;
+  align-content:space-between; 
+  justify-content:flex-start;
+  margin-right: 1em;
+
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  margin-left: .5em;
+  border: solid;
+  
+}
+.match_name {
+  width: 8em;
+  margin-top: 0;
+  font-size: 2.4em;
+  padding: 1em;
+  font-weight: normal;
+  margin: 1em;
+  background-color: rgb(159, 106, 7);
+  color: rgb(255, 248, 220);
+  border-radius: 10px;
+  display: flex;
+  
+}
+span {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 3%;
+}
+.beer_preference {
+  padding: 3%;
+}
+.pronoun {
+  font-size: 1.45rem;
+  color: rgb(255, 248, 220);
+}
+.request_btn {
+  padding-left: 50%;
+}
+.hobbies {
+  margin: 0;
+  background-color: rgb(159, 106, 7);
+  /* padding: 8px 15px; */
+  border-radius: 10px;
+}
+.hobbies_list {
+  background-color: rgb(159, 106, 7);
+  padding: 0;
+  margin: 0;
+}
+.hobbies_list li {
+  list-style: none;
+  border-bottom: 1px dotted #999;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+}
+
+
+
 

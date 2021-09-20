@@ -7,11 +7,18 @@
         <div class="match row row-cols-1 row-cols-md-2">
             {{#each users as |user| }}
             <div class="match_name card ">
-                <h1 class="card-title">{{user.first_name}}</h1>
-                 <span class="age"><strong>{{user.age}}</strong></span>
-                 <span class="pronoun">{{user.preferred_pronoun}}</span>
-                    <h3 class="beer_preference">{{user.beers_name}}</h3>
-                    <h4 class="hobbies">Hobbies: {{user.hobbies}}</h4>
+                {{!-- <div class="container">
+                    <div class="row"> --}}
+                <div class="name_photo col-sm-6">
+                    <h1 class="card-title">{{user.first_name}}</h1>
+                    <img class="circle profilePhoto col-sm-6" src="" >
+                    {{!-- </div>
+                    </div> --}}
+                </div><!--ending name and photo div-->
+                 <span class="age"><strong>Age: </strong>{{user.age}}</span>
+                 <span class="pronoun"><strong>Pronoun: </strong>{{user.preferred_pronoun}}</span>
+                    <h3 class="beer_preference"><strong>Beer Type: </strong>{{user.beers_name}}</h3>
+                    <h4 class="hobbies"><strong>Hobbies: </strong>{{user.hobbies}}</h4>
                     <ul class="hobbies_list">
                         {{#each user.user_hobbies}}
                         <li>
@@ -24,5 +31,6 @@
         </div><!--ending div match card-->
      
 </div><!---ending div for container-->
+
 
 
