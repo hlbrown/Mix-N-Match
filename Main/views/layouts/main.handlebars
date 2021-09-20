@@ -16,20 +16,16 @@
 
 <div class="flex-column justify-space-around">
     <header class="primaryHeader display-flex justify-space-between align-center p-2">
+      
+        {{#if logged_in}}
+        <button class="log_out banner_btn" id="logout">Log Out</button>    
+        {{else}}
         <button class="log_in primary" onclick="location.href='/login'">Log in</button>
         <button class="signup primary" onclick="location.href='/signup'">Sign up</button>
-    </header>
-    
- 
-        {{#if logged_in}}
-        <header class="banner"> 
-                <div class="banner">
-        <button class="log_out banner_btn" id="logout">Log Out</button> 
-        <button class="log_in banner_btn" onclick="location.href='/login'">Log in</button>
-        <button class="signup banner_btn" onclick="location.href='/signup'">Sign up</button>
-                </div>
-        </header>        
         {{/if}}
+    </header>   
+
+
     <main class="container container-fluid mt-5">
          <div class="jumbotron">
              <h1 class="display-4">Mix n Match</h1>       
