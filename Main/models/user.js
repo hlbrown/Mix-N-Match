@@ -33,11 +33,9 @@ User.init(
       },
     },
     password: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(64),
       allowNull: false,
-      validate: {
-        len: [15],
-      },
+      is: /^[0-9a-f]{64}$/i
     },
     age: {
       type: DataTypes.INTEGER,
@@ -69,9 +67,11 @@ User.init(
     },
     willing_to_grab_a_pint: {
       type: DataTypes.BOOLEAN,
+      allowNull: true,
     },
     matched: {
-        type: DataTypes.BOOLEAN,
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
     },
   },
   {
