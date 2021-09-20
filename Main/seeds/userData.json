@@ -1,5 +1,18 @@
 [
   {
+    "first_name": "Jimmy",
+    "last_name": "Simpson",
+    "email": "simpsonjd12@gmail.com",
+    "password": "worldhello12",
+    "city": "Raleigh",
+    "preferred_pronoun": "He",
+    "hobbies": "Video Games, Golf, Volleyball",
+    "dating_or_friendship": "friendship",
+    "interested_in": "She/Her",
+    "beers_name": "IPA",
+    "willing_to_grab_a_pint": "true"
+  },
+  {
     "first_name": "Daniel",
     "last_name": "Bradley",
     "email": "danielbvideo@gmail.com",

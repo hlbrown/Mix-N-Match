@@ -17,3 +17,23 @@
     </div>
 </div>
 {{/each}}
+
+{{#each users as |user| }}
+<div class="match">
+    <div class="match_name">
+        <h1>{{user.first_name + user.last_name}}</h1>
+        <span class="pronoun">({{user.preferred_pronoun}})</span> 
+        <span class="age"><strong>{{user_age}}</strong></span>
+<h3 class="beer_preference">{{user.beers_name}}</h3>
+        <h4 class="hobbies">{{user.hobbies}}</h4>
+        <ul class="hobbies_list">
+            {{each user.hobbies}}
+            <li>
+                {{{this}}}
+            </li>
+        </ul>
+    </div>
+    
+</div>
+{{/each}}
+
