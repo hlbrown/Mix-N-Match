@@ -18,6 +18,7 @@ router.post('/signup', async (req, res) => {
       beers_name: req.body.beers_name,
       willing_to_grab_a_pint: req.body.willing_to_grab_a_pint,
       matched: req.body.matched,
+      user_image: req.body.user_image,
     });
 
     req.session.save(() => {
