@@ -6,7 +6,7 @@
 
         <div class="match row row-cols-1 row-cols-md-2">
             {{#each users as |user| }}
-            <div class="match_name card ">
+            <div class="match_card card hvr-grow">
                 {{!-- <div class="container">
                     <div class="row"> --}}
                 <div class="name_photo col-sm-6">
@@ -15,17 +15,12 @@
                     {{!-- </div>
                     </div> --}}
                 </div><!--ending name and photo div-->
-                 <span class="age"><strong>Age: </strong>{{user.age}}</span>
-                 <span class="pronoun"><strong>Pronoun: </strong>{{user.preferred_pronoun}}</span>
-                    <h3 class="beer_preference"><strong>Beer Type: </strong>{{user.beers_name}}</h3>
-                    <h4 class="hobbies"><strong>Hobbies: </strong>{{user.hobbies}}</h4>
-                    <ul class="hobbies_list">
-                        {{#each user.user_hobbies}}
-                        <li>
-                            {{{this}}}
-                        </li>
-                        {{/each}}
-                     </ul>
+                <div class="cheers"><button class="cheers_btn">Cheers {{user.first_name}}</button></div>
+                 <span class="age">{{user.age}}</span>
+                 <span class="pronoun">{{user.preferred_pronoun}}</span>
+                    <span class="beer_preference"><strong>Beer of Choice: </strong>{{user.beers_name}}</span>
+                  
+                    
                 </div >
                 {{/each}}<!--ending div match_name-->
         </div><!--ending div match card-->
