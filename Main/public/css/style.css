@@ -7,9 +7,9 @@ html {
   min-height: 100vw;
   position: relative;
   margin: 0;
-
   box-sizing: border-box;
 }
+
 header {
   display: flex;
   flex-direction: row-reverse;
