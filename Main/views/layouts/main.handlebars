@@ -24,8 +24,19 @@
         <button class="signup primary hvr-sweep-to-top" onclick="location.href='/signup'">Sign up</button>
         {{/if}}
     </header>   
-
-
+{{#if logged_in}}
+<main class="container container-fluid mt-5">
+         <div class="jumbotron">
+             <h1 class="display-4 head_text">Matches</h1>       
+             
+                        <marquee class="welcome_info lead">
+                            Cheers your new friends to show them you are interested in them! 
+                        </marquee>           
+                    <div>
+                        {{{ body }}}        
+                    </div>
+             </div>       
+{{else}}
     <main class="container container-fluid mt-5">
          <div class="jumbotron">
              <h1 class="display-4 head_text">Mix n Match</h1>       
@@ -38,7 +49,7 @@
                     </div>
              </div>          
 
-          
+{{/if}}          
   
 
     </main>
