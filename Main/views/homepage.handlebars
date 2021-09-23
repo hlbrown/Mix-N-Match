@@ -11,7 +11,7 @@
                     <div class="row"> --}}
                 <div class="name_photo col-sm-6">
                     <h1 class="card-title">{{user.first_name}}</h1>
-                    <img class="circle profilePhoto col-sm-6" src="" >
+                    <img class="circle profilePhoto col-sm-6" src="{{user.user_photo}}" alt="Photo of {{user.first_name}}" >
                     {{!-- </div>
                     </div> --}}
                 </div><!--ending name and photo div-->
@@ -22,10 +22,18 @@
                   
                     
                 </div >
+            
                 {{/each}}<!--ending div match_name-->
         </div><!--ending div match card-->
-     
-</div><!---ending div for container-->
+     {{#if logged_in}}
+                     <div class=“delete_profile form-group”>
+                        <h3>I’ve had enough Beer!</h3>
+                        <button class=“banner_btn” id=“delete_button” type=“submit” data-id={{currentUser.id}}>Delete My Profile</button>
+                    </div>
+                    {{/if}}
 
+
+</div><!---ending div for container-->
+<script src=“./js/delete.js”></script>
 
 
