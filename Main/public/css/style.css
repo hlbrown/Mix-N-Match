@@ -10,14 +10,14 @@ html {
   box-sizing: border-box;
 }
 
-header {
+/* header {
   display: flex;
   flex-direction: row-reverse;
   margin-right: auto;
   margin-left: auto;
   position: relative;
   background: rgb(248, 231, 164, 0.6);
-}
+} */
 
 /* Buttons */
 .banner_btn {
@@ -81,9 +81,13 @@ header {
   align-items: center;
   text-align: center;
 }
+.logo_title {
+  display: flex;
+  flex-direction: row;
+}
 
 .head_text {
-  height: 75%;
+  height: 5%;
   margin: 5%;
   text-align: center;
   font-size: xx-large;
@@ -91,9 +95,6 @@ header {
 }
 
 /*card styles for possible matches*/
-.card {
-  width: 18rem;
-}
 
 .matches_container {
   display: grid;
@@ -124,6 +125,55 @@ header {
   display: flex;
   box-shadow: 10px 5px 5px rgb(90, 59, 1);
 }
+
+/* start of testing flipping cards */
+/* .match_card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin: -150px;
+  float: left;
+  perspective: 500px;
+}
+
+.match {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  transition: transform 3s;
+  transform-style: preserve-3d;
+}
+
+.match_card:hover .match {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
+  color: #03446a;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #03446a;
+  color: white;
+  transform: rotateY(180deg);
+} */
+
+/* end testing of flipping cards */
 
 .hvr-grow {
   vertical-align: middle;
@@ -185,9 +235,109 @@ span {
   width: auto;
 }
 
+/* Log in page */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.signup_containter {
+  width: 40%;
+  padding: 3px;
+}
+.login_container {
+  width: 40%;
+  padding: 3px;
+}
+
+.signup_btn {
+  margin-top: 15%;
+}
+
+.form {
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  background-image: url("https://api.freelogodesign.org/files/e38d9e9cff73417e8ffabd8dbc4f1841/thumb/logo_200x200.png?v=637679566910000000");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 130px;
+  border: 2px;
+  margin: 5%;
+  border-style: double;
+  box-sizing: border-box;
+  border-radius: 70%;
+  opacity: 120%;
+  align-items: center;
+}
+/* End log in page */
+
+/* Sign up form */
+.signup_intro {
+  width: 75%;
+  text-align: center;
+}
+.signup_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.signup_pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.picture1 {
+  background-image: url("https://vinepair.com/wp-content/uploads/2016/05/Happiness-Soc.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 175px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.picture2 {
+  background-image: url("https://i.insider.com/5bfe8b2848eb120f3e05b322?width=750&format=jpeg&auto=webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 175px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.form-group_btn {
+  padding-top: 5px;
+  align-items: center;
+}
+
+/* delete */
+.delete_profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+/* end delete */
+
 /* Footer */
 
-footer {
-  height: fit-content;
+.footer {
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
   background: rgb(248, 231, 164, 0.6);
 }

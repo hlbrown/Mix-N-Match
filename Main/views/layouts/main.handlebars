@@ -20,8 +20,7 @@
         {{#if logged_in}}
         <button class="log_out banner_btn hvr-sweep-to-top" id="logout">Log Out</button>    
         {{else}}
-        <button class="log_in primary hvr-sweep-to-top" onclick="location.href='/login'">Log in</button>
-        <button class="signup primary hvr-sweep-to-top" onclick="location.href='/signup'">Sign up</button>
+        
         {{/if}}
     </header>   
 {{#if logged_in}}
@@ -39,11 +38,16 @@
 {{else}}
     <main class="container container-fluid mt-5">
          <div class="jumbotron">
-             <h1 class="display-4 head_text">Mix n Match</h1>       
-             
-                        <marquee class="welcome_info lead">
+             <div class="logo_title">
+                  <div class="logo"></div> 
+                  <marquee class="welcome_info lead">
                             Join today to get in touch with your future drinking buddies!
-                        </marquee>           
+                        </marquee>   
+             </div>
+              
+                 
+             
+                               
                     <div>
                         {{{ body }}}        
                     </div>
@@ -53,9 +57,7 @@
   
 
     </main>
-    <footer class=" container-fluid footer mt-auto ">
-        mix|match\yadayada
-    </footer>
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>   
 {{#if logged_in}}
@@ -63,6 +65,9 @@
 {{/if}}
 
 </div>
+ <footer class="footer">
+      <a href="" style="color: rgb(92, 52, 1);">Donate</a> | <a href="" style="color: rgb(92, 52, 1);">Join our Team</a> | <a href="" style="color: rgb(92, 52, 1);">Contact us</a> | <a href="" style="color: rgb(92, 52, 1);">FAQ</a>
+    </footer>
 </body>
 </html>
 
