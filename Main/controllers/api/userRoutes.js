@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Notification } = require('../../models');
 
 router.post('/signup', async (req, res) => {
 
-   try {
+  try {
     const dbUserData = await User.create({
       first_name: req.body.first_name,
       last_name: req.body.last_name,
@@ -23,6 +23,8 @@ router.post('/signup', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.first_name = dbUserData.first_name;
+      req.session.last_name = dbUserData.last_name;
       req.user = dbUserData;
       res.status(200).json(dbUserData);
     });
@@ -30,43 +32,32 @@ router.post('/signup', async (req, res) => {
     console.log(err);
     res.status(500).json(err);
   }
+});
+router.post('/notification', async (req, res) => {
   
-// try {
-//  const userData = await User.create(req.body);
-//  req.session.save(() => {
-//    req.session.user_id = userData.id;
-//    req.session.logged_in = true;
-//   res.status(200).json(userData);
-//    });
-//  } catch (err) {
-//     res.status(400).json(err);
-//   }
+  try {
+   
+    const likeData = await Notification.create({
+      user_id: req.body.liked_id,
+      sender_id: req.session.user_id,
+      sender_firstName: req.session.first_name,
+      sender_lastName: req.session.last_name,
+    });
+    // req.session.save(() => {
+    //   req.session.loggedIn = true;
+    //   req.user = likeData;
+    res.status(200).json(likeData);
+    //})
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
-//router.post('/signup', async (req, res) => {
-//    User.create(req.body)
-//    .then(( user ) => {
-//      if(req.body.user_id.length){
-//    const userIdArr = req.body.user_id.map((id) => {
-//      return {
-//        user_id: id,
-//      };
-//    });
-//    return User.bulkCreate(userIdArr);
-//  }
-//  res.status(200).json(user);
-//})
-//  .then((user_id) => res.status(200).json(user_id))
-//  .catch((err) => {
-//    console.log(err);
-//    res.status(400).json(err);
-//  });
-//
-//})
 router.post('/login', async (req, res) => {
   // try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
-
+  const userData = await User.findOne({ where: { email: req.body.email } });
+  
     if (!userData) {
       res
         .status(400)
@@ -85,6 +76,8 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
+        req.session.first_name = userData.first_name;
+       req.session.last_name = userData.last_name;
       req.user = userData;
       req.session.logged_in = true;
       

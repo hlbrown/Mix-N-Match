@@ -74,10 +74,9 @@ User.init(
       allowNull: true,
     },
     user_image: {
-      type: DataTypes.BLOB,
-      allowNull: true,
+    type: DataTypes.BLOB,
+    allowNull: true,
     },
-  },
 
   {
     hooks: {

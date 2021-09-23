@@ -1,34 +1,38 @@
 <div class="container">
-    <div class="signup_container">Not a member?  Sign up today, its worth a 'shot'!
-      <div class="signup_btn">
-        
-            <button class="signup banner_btn" onclick="location.href='/signup'">Sign up</button>
-        </div>
-    </div>
-  <div class="login_container">
-    <div class="login_signup">
-      
-      <h2>Login</h2>
+  <div class="signup_container">
+  <div class="signup_btn">
+    <form class="form signup-form">
+      <div class="form-group">
+        <button class="signup banner_btn" onclick="location.href='/signup'">Sign up</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="login_container">
+  <div class="login_signup">
+    <!--<div class=" col-sm-12 col-md-6 col-lg-3">-->
+      <h2>Login....</h2>
 
       <form class="form login-form">
         <div class="form-group">
-         <div class="email_div"> <label for="email-login">Email:</label></div>
+          <label for="email-login">email:</label>
           <input class="form-input" type="text" id="email-login" />
         </div>
         <div class="form-group">
-           <div class="password_div"></div><label for="password-login">Password:</label></div>
+          <label for="password-login">password:</label>
           <input class="form-input" type="password" id="password-login" />
         </div>
         <div class="form-group">
-          <button class="btn btn-primary" type="submit">Login</button>
-        </div>
-        
+          <button class="btn btn-primary" type="submit">login</button>      
+       
       </form>
-   
-    </div>  <!--end div for col-->
-  
+    <!--</div>  end div for col-->
   </div><!--end div for row-->
- 
 </div><!--end div for container-->
 
+</div>
+
+
 <script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
