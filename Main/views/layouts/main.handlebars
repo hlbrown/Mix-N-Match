@@ -18,40 +18,57 @@
     <header class="primaryHeader display-flex justify-space-between align-center p-2">
       
         {{#if logged_in}}
-        <button class="log_out banner_btn" id="logout">Log Out</button>    
-        {{else}}
-        <button class="log_in primary" onclick="location.href='/login'">Log in</button>
-        <button class="signup primary" onclick="location.href='/signup'">Sign up</button>
-        {{/if}}
+        <button class="log_out banner_btn" id="logout ">Log Out</button>
+        {{/if}}<!-- removed the else since we are only providing an option if the user is logged in-->
     </header>   
 
-
-    <main class="container container-fluid mt-5">
-         <div class="jumbotron">
-             <h1 class="display-4">Mix n Match</h1>       
+{{#if logged_in}}
+    <main class="container container-fluid mt-5"><!--Opening main section/div-->
+         <div class="jumbotron"><!--opening div for jimbotron-->
+             <h1 class="display-4 head-text">Mix n Match</h1>       
              
                         <marquee class="welcome_info lead">
                             Join today to get in touch with your future drinking buddies!
                         </marquee>           
-                    <div>
+                    <div><!--opening div for body handlebars-->
                         {{{ body }}}        
-                    </div>
-             </div>          
+                    </div><!--ending div for body-->
+             </div> <!--ending div for jumbotron -->     
 
-          
+    {{else}}
+
+    <main class="container container-fluid mt-5"> <!--Earlier I (HB) pointed out 2 opening main sections but possibly this is fine to the else???-->
+        <div class="jumbotron">
+            <div class="logo_title">
+                <div class="logo"></div><!--begining and end div for logo title-->
+                <marquee class="welcome_info lead">
+                    Join today to get in touch with your future drinkibuddies!
+                </marquee>
+            </div>  <!--ending div for log_title-->
+            
+            <div>
+                {{{ body }}}
+            </div>
+        </div><!--ending jumbotron div-->
+    
+        {{/if}}   <!--closing if statement from 1st main section-->
+    
+    </main><!--closing main section-->         
   
-
     </main>
     <footer class=" container-fluid footer mt-auto fixed-bottom">
-        mix|match\yadayada
+        mix|match\yadayada<!-- We should change this before demonstrating -->
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>   
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
+<script src="/js/delete.js"></script>
+<script src="/js/notification.js"></script>
 {{/if}}
 
-</div>
+</div><!--closing div of first after body-->
 </body>
 </html>
 

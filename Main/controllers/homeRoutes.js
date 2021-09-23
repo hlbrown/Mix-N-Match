@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Matches, User } = require('../models');
+const { Matches, User, Notification } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   console.log(req.session.user_id);
   
   try {
-    // Get all matches and JOIN with user data
+    // Get all suggested matches and JOIN with user data
     const currentUser = await User.findOne({ where: { id: req.session.user_id } });
     const currUser = currentUser.get({ plain: true });
     console.log(currUser)
@@ -14,28 +14,33 @@ router.get('/', withAuth, async (req, res) => {
     const userData = await User.findAll({
       where: { beers_name: currUser.beers_name, interested_in: currUser.preferred_pronoun }
     
-        
-      // include: [
-      //   {
-      //     model: User,
-      //     attributes: ['first_name', 'city', 'hobbies', 'preferred_pronoun', 'beers_name'],
-      //   },
-      // ],
     });
-
     // Serialize data so the template can read it
     const users = userData.map((user) => user.get({ plain: true }));
-
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      users, 
+    res.render('homepage', {
+      users,
+      currentUser: currUser,
       logged_in: req.session.logged_in 
     });
+    return(currUser, userData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+router.get('/notification', async (req, res) => {
+  try {
+    const notiData = await Notification.findByPk(req.params.id);
+    const likes = notiData.get({ plain: true });
+    res.render('notification', {
+      likes,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 
 router.get('/matches/:id', async (req, res) => {
@@ -58,7 +63,27 @@ router.get('/matches/:id', async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
+});
+
+  router.delete('/delete/:id', async (req, res) => {
+    try{
+      const userData = await User.destroy({
+        where: { id: req.params.id,
+                    }});
+  
+      if (!userData) {
+        res.status(404).json({ message: 'No user found with this id!' });
+        return;
+      }
+  
+      res.status(200).json(userData);
+    } catch (err) {
+      console.log("helloworld")
+      console.log(err)
+      res.status(500).json(err);
+    }
   });
+
 
 
 
@@ -93,5 +118,9 @@ router.get('/signup', (req, res) => {
   console.log("signup")
   res.render('signup');
 });
+//router.get('/notification', (req, res) => {
+//  console.log("notification")
+//  res.render('notification');
+//});
 
   module.exports = router;

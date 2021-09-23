@@ -11,12 +11,11 @@ Matches.init(
       autoIncrement:true,
       primaryKey:true,
     },
-    beers_name: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'beers',
-        key: 'name',
-      },
+    liker: {
+      type: DataTypes.BOOLEAN
+    },
+    likee: {
+      type: DataTypes.BOOLEAN,
     },
     
   },

@@ -1,28 +1,34 @@
 <!-- Loop over each object in the projects array -->
-
-
-
 <div class="matches_container">
 
         <div class="match row row-cols-1 row-cols-md-2">
             {{#each users as |user| }}
-            <div class="match_name card ">
-                <h1 class="card-title">{{user.first_name}}</h1>
-                 <span class="age"><strong>{{user.age}}</strong></span>
+            <div class="match_card card hvr-grow ">
+
+                <div class="name_photo col-sm-6">
+                    <h1 class="card-title">{{user.first_name}}</h1>
+                    <img class="circle profilePhoto col-sm-6" src="{{user.user_photo}}" alt="Photo of {{user.first_name}}">
+                </div>
+                
+                <div class="cheers"><button class="like" name="like" data-id="{{user.id}}">Cheers {{user.first_name}}</button></div>
+
+                 <span class="age">{{user.age}}</span>
                  <span class="pronoun">{{user.preferred_pronoun}}</span>
-                    <h3 class="beer_preference">{{user.beers_name}}</h3>
-                    <h4 class="hobbies">Hobbies: {{user.hobbies}}</h4>
-                    <ul class="hobbies_list">
-                        {{#each user.user_hobbies}}
-                        <li>
-                            {{{this}}}
-                        </li>
-                        {{/each}}
-                     </ul>
-                </div >
-                {{/each}}<!--ending div match_name-->
+                <span class="beer_preference"><strong>Beer of Choice: </strong>{{user.beers_name}}</span>
+                    <h4 class="beer_preference">{{user.beers_name}}</h3>
+                 
+
+                </div ><!--ending div match_name-->
+                {{/each}}
         </div><!--ending div match card-->
+            {{#if logged_in}}
+            <div class="delete_profile form-group">
+                <h3>I’ve had enough beer!</h3>
+                <button class="banner_btn" id="delete_button" type="submit" data-id={{currentUser.id}}>Delete My Profile</button>
+            </div>
+            {{/if}}
      
 </div><!---ending div for container-->
 
-
+<!--<script src="./js/notification.js"></script>-->
+<script src="./js/delete.js"></script>
