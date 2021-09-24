@@ -7,6 +7,8 @@ const multerUploads = multer({storage});
 
 const dUri = new Datauri();
 
-const datauri = req => dUri.format(path.extname(req.file.originalname).toString(), req.file.buffer);
+const datauri = req => {
+    return dUri.format(path.extname(req.file.originalname).toString(), req.file.buffer);
+};
 
 module.exports = {multerUploads, datauri }

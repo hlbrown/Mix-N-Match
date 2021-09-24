@@ -11,7 +11,8 @@
     "dating_or_friendship": "dating",
     "interested_in": "She/Her",
     "beers_name": "American Lager",
-    "willing_to_grab_a_pint": "true"
+    "willing_to_grab_a_pint": "true",
+    "user_image": ""
   },
   {
     "first_name": "Emily",
@@ -74,14 +75,15 @@
     "last_name": "Nagle",
     "email": "Zmkkenzie@aol.cpm",
     "password": "clearlyF@ke",
-    "age": 18,
+    "age": 21,
     "city": "Raleigh",
     "preferred_pronoun": "She/Her",
     "hobbies": "petting dogs, eating pizza, tiktok",
     "dating_or_friendship": "friendship",
     "interested_in": "He/Him",
     "beers_name": "American Lager",
-    "willing_to_grab_a_pint": "true"
+    "willing_to_grab_a_pint": "true",
+    "user_image": "https://res.cloudinary.com/dtjtbzifj/image/upload/v1632511843/zara_jhhlme.jpg"
   },
   {
     "first_name": "Rykeir",
@@ -249,7 +251,8 @@
     "dating_or_friendship": "friendship",
     "interested_in": "He/Him",
     "beers_name": "American Lager",
-    "willing_to_grab_a_pint": "true"
+    "willing_to_grab_a_pint": "true",
+    "user_image":"https://res.cloudinary.com/dtjtbzifj/image/upload/v1632512016/oip_pyqyry.jpg"
   },
   {
     "first_name": "Carter",

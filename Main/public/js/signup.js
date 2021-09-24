@@ -13,7 +13,24 @@
        const dating_or_friendship = document.querySelector('#dating_friendship-signup').value.trim();
        const interested_in = document.querySelector('#interested_in-signup').value.trim();
        const beers_name = document.querySelector('#beers_name-signup').value.trim();
+       const input = document.getElementById('user_image-signup')
 
+       //this will upload the file after reading it.
+      const upload = (file) => {
+        const data = new FormData();
+        data.append('image-raw', file);
+
+        fetch('/api/upload', { //the POST endpoint.
+          method: 'POST',
+          body: data //this is the file object.
+        }).then(
+          response => response.json()
+        ).then(
+          () => document.location.replace('/')
+        ).catch(
+          error => console.error(error)
+        );
+      };
 
 
      if (first_name && last_name && email && password && age && city && preferred_pronoun && hobbies && dating_or_friendship && interested_in && beers_name ) {
@@ -25,6 +42,7 @@
 
          if (response.ok) {
              document.location.replace('/login');
+             upload(input.files[0]);
          } else {
              alert(response.statusText);
          }
