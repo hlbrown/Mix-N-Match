@@ -29,7 +29,9 @@ header {
   margin: 5px;
 }
 .signup {
-  margin: 5px;
+  margin-bottom: 2px;
+  font-size: 1em;
+  height: 38px;
 }
 .hvr-sweep-to-top {
   display: inline-block;
@@ -105,6 +107,7 @@ header {
   padding: var(--base-padding);
   width: 100%;
   max-width: 1000px;
+  height: fit-content;
 }
 .match {
   display: flex;
@@ -224,8 +227,7 @@ span {
   flex-direction: column;
 }
 .signup_btn {
-  margin-top: 45%;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .form {
