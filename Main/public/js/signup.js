@@ -24,17 +24,14 @@
          });
 
          if (response.ok) {
-             document.location.replace('/');
+             document.location.replace('/login');
          } else {
              alert(response.statusText);
          }
      }
 
-    
 };
- 
 
-  
   document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);

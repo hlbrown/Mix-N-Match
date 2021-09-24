@@ -5,6 +5,7 @@ const RelationshipType = require('./relationshipTypes');
 const User = require('./user');
 const Beers = require('./beers');
 const Photo = require('./photo');
+const Notification = require('./notification');
 
 
 Pronoun.belongsTo(User, {
@@ -17,6 +18,9 @@ RelationshipType.belongsTo(User, {
 
 Beers.belongsTo(User, {
  foreignKey: 'beers_name'
+});
+Notification.belongsTo(User, {
+  foreignKey: 'user_id'
 });
 
 // User.hasMany(Matches, {
@@ -46,4 +50,5 @@ module.exports = {
   // Matches,
   // Conversations,
   Photo,
+  Notification,
 };
