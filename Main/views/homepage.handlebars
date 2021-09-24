@@ -16,7 +16,7 @@
                  <span class="age">{{user.age}}</span>
                  <span class="pronoun">{{user.preferred_pronoun}}</span>
                 <span class="beer_preference"><strong>Beer of Choice: </strong>{{user.beers_name}}</span>
-                    <h4 class="beer_preference">{{user.beers_name}}</h3>
+                    
                  
 
                 </div ><!--ending div match_name-->
@@ -25,7 +25,7 @@
             {{#if logged_in}}
             <div class="delete_profile form-group">
                 <h3>I’ve had enough beer!</h3>
-                <button class="banner_btn" id="delete_button" type="submit" data-id={{currentUser.id}}>Delete My Profile</button>
+                <button class="banner_btn hover-to-bottom" id="delete_button" type="submit" data-id={{currentUser.id}}>Delete My Profile</button>
             </div>
             {{/if}}
      
