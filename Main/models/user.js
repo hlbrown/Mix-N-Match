@@ -74,7 +74,7 @@ User.init(
       allowNull: true,
     },
     user_image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
       allowNull: true,
     },
   },
