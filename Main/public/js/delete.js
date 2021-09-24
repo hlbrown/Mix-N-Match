@@ -1,18 +1,20 @@
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-      console.log(id);
 
-      const response = await fetch(`/delete/${id}`, {
-      method: 'DELETE',
-    });
+const deleteB = document.querySelector("#delete_button");
+console.log(deleteB)
 
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert('Failed to delete project');
-    }
+const deletebutton = async (event) => {
+  const userID =  event.target.getAttribute("data-id")
+  console.log(userID);
+  const response = await fetch(`/delete/${userID}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    document.location.replace('/login');
+  } else {
+    alert(response.statusText);
   }
 };
 
-document.querySelector('.delete').addEventListener('submit', delButtonHandler);
+deleteB.addEventListener('click', deletebutton);

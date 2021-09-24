@@ -22,7 +22,7 @@ router.post('/signup', async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
       req.session.first_name = dbUserData.first_name;
       req.session.last_name = dbUserData.last_name;
       req.user = dbUserData;
