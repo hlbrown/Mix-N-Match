@@ -73,11 +73,11 @@ User.init(
       type: DataTypes.BOOLEAN,
       allowNull: true,
     },
-  user_image: {
+    user_image: {
     type: DataTypes.BLOB,
     allowNull: true,
-},
-},
+    },
+
   {
     hooks: {
       beforeCreate: async (newUserData) => {
