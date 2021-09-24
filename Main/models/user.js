@@ -77,7 +77,7 @@ User.init(
     type: DataTypes.BLOB,
     allowNull: true,
     },
-
+  },
   {
     hooks: {
       beforeCreate: async (newUserData) => {

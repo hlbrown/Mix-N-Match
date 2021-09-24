@@ -12,8 +12,8 @@ router.get('/', withAuth, async (req, res) => {
     console.log(currUser)
     //console.log(currentUser);
     const userData = await User.findAll({
-      where: { beers_name: currUser.beers_name }
-      // , interested_in: currUser.preferred_pronoun }
+      where: { beers_name: currUser.beers_name, interested_in: currUser.preferred_pronoun  }
+
     
     });
     // Serialize data so the template can read it
