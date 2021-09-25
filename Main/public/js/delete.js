@@ -12,6 +12,7 @@ const deletebutton = async (event) => {
 
   if (response.ok) {
     document.location.replace('/login');
+    alert("You have deleted your account. See you soon!");
   } else {
     alert(response.statusText);
   }

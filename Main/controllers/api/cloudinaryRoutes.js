@@ -5,6 +5,7 @@ const multer = require('../../config/multer');
 const cloudinaryConfig = cloudinary.cloudinaryConfig;
 const uploader = cloudinary.uploader;
 const daturi = multer.datauri;
+const db = require('../../models')
 
 router.post('/',multerUploads.single('image-raw'), cloudinaryConfig , (req, res) => {
    const file = daturi(req)
@@ -13,15 +14,15 @@ router.post('/',multerUploads.single('image-raw'), cloudinaryConfig , (req, res)
     (error, result) => {
         console.log(result)
         
-        // db.editpost({img_url: result.secure_url}, req.params.id)
-        // .then(post => {
-        //     res.status(200).json({result})
-        // })
-        // .catch(error => {
-        //     res.status(500).json({message: "Error"})
-        // })
-    }
-    )
+        db.User.update({user_image: result.secure_url}, {where: {id:req.session.user_id}})
+        .then(post => {
+            res.status(200).json({result})
+        })
+        .catch(error => {
+            res.status(500).json({message: "Error"})
+        })
+    })
+    
 });
 
 module.exports = router;

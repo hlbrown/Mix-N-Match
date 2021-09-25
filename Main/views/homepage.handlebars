@@ -1,4 +1,6 @@
 <!-- Loop over each object in the projects array -->
+
+
 <div class="matches_container">
 
         <div class="match row row-cols-1 row-cols-md-2">
@@ -8,15 +10,15 @@
 
                 <div class="name_photo col-sm-6">
                     <h1 class="card-title">{{user.first_name}}</h1>
-                    <img class="circle profilePhoto col-sm-6" src="{{user.user_photo}}" alt="Photo of {{user.first_name}}">
+                    <img class="circle profilePhoto col-sm-6" src="{{user.user_image}}" alt="Photo of {{user.first_name}}">
                 </div>
                 
                 <div class="cheers"><button class="like" name="like" data-id="{{user.id}}">Cheers {{user.first_name}}</button></div>
 
-                 <span class="age">{{user.age}}</span>
+                 <span class="age">{{user.age}}</span><span class="location">{{user.city}}</span>
                  <span class="pronoun">{{user.preferred_pronoun}}</span>
                 <span class="beer_preference"><strong>Beer of Choice: </strong>{{user.beers_name}}</span>
-                    <h4 class="beer_preference">{{user.beers_name}}</h3>
+               
                  
 
                 </div ><!--ending div match_name-->
@@ -25,7 +27,7 @@
             {{#if logged_in}}
             <div class="delete_profile form-group">
                 <h3>I’ve had enough beer!</h3>
-                <button class="banner_btn" id="delete_button" type="submit" data-id={{currentUser.id}}>Delete My Profile</button>
+                <button class="banner_btn " id="delete_button" type="submit" data-id={{currentUser.id}}>Delete My Profile</button>
             </div>
             {{/if}}
      
