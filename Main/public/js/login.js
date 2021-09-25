@@ -15,7 +15,7 @@ console.log(email,password)
       // If successful, redirect the browser to the profile page
       document.location.replace('/');
     } else {
-      alert(response.statusText);
+    alert("Your password or email are incorrect, please try again!");
     }
   }
 };

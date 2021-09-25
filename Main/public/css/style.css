@@ -1,3 +1,6 @@
+* {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
 body,
 html {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -17,10 +20,7 @@ header {
 }
 
 /* Buttons */
-.btn {
-  height: fit-content;
-  width: fit-content;
-}
+
 .banner_btn {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   border-radius: 5px;
@@ -104,7 +104,7 @@ header {
 .login_div {
   padding-top: 15px;
 }
-/*suggested match styling*/
+
 .matches_container {
   display: grid;
   grid-gap: var(--base-padding);
@@ -117,6 +117,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 5px;
   min-height: 100vh;
   font-family: var(--text-font);
   color: #2f2f2f;
@@ -183,7 +184,17 @@ header {
   margin-top: 0;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-
+.avatarpic {
+  float: right;
+  padding-left: 15px;
+}
+.avatar {
+  float: right;
+  padding-right: 15px;
+}
+.head-text {
+  padding: 8px;
+}
 span {
   text-align: center;
   align-items: center;
@@ -233,7 +244,9 @@ span {
 .signup_btn {
   margin-bottom: 5px;
 }
-
+.form-group {
+  padding: 0.5px;
+}
 .form {
   align-items: center;
   text-align: center;
