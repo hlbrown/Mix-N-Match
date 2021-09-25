@@ -17,6 +17,10 @@ header {
 }
 
 /* Buttons */
+.btn {
+  height: fit-content;
+  width: fit-content;
+}
 .banner_btn {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   border-radius: 5px;
