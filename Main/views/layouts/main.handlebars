@@ -16,19 +16,23 @@
 
 <div class="flex-column justify-space-around">
     <header class="primaryHeader display-flex justify-space-between align-center p-2">
-      <strong>Mix 'n' Match</strong> 
+      <strong>Mix 'n' Match </strong> 
+     
         {{#if logged_in}}
-        <button class="log_out banner_btn" id="logout ">Log Out</button>
+        <div class="avatar">
+         <div class="avatarpic"><img class="circle profilePhoto col-sm-6" src="{{currentUser.user_image}}"></img></div>
+        <div class="logout"><button class="log_out banner_btn hvr-sweep-to-top" id="logout ">Log Out</button></div>
+        </div>
         {{/if}}<!-- removed the else since we are only providing an option if the user is logged in-->
     </header>   
 
 {{#if logged_in}}
     <main class="container container-fluid mt-5"><!--Opening main section/div-->
          <div class="jumbotron"><!--opening div for jimbotron-->
-             <h1 class="display-4 head-text">Mix n Match</h1>       
+             <h1 class="display-4 head-text " style="font-size: 2.5em;">Hey {{currentUser.first_name}}, you matched with these fine people!</h1>       
              
                         <marquee class="welcome_info lead">
-                            Join today to get in touch with your future drinking buddies!
+                            Cheers your new matches to request contact info!
                         </marquee>           
                     <div><!--opening div for body handlebars-->
                         {{{ body }}}        
@@ -42,7 +46,7 @@
             <div class="logo_title">
                 <div class="logo"></div><!--begining and end div for logo title-->
                 <marquee class="welcome_info lead">
-                    Join today to get in touch with your future drinkibuddies!
+                    Join today to get in touch with your future drinking buddies!
                 </marquee>
             </div>  <!--ending div for log_title-->
             
