@@ -52,9 +52,9 @@
   * If you have any questions regarding the application, please reach out to any of the application creators: **Hannah Brown**, **Daniel Bradley**, **Jamel Eggleston**, or **Jimmy Simposon**.
   
   ## Screenshots
-  ![Image 1 of application:](permalink goes here)
-  ![Image 2 of application:](permalinklink goes here)
-  ![Image 3 of application:](permalink goes here)
+  ![Image 1 of application:](https://github.com/hlbrown/project-2-full-stack/blob/main/images/screenshots/Login%20%26%20Signup.png)
+  ![Image 2 of application:](https://github.com/hlbrown/project-2-full-stack/blob/main/images/screenshots/Matches%20Dashboard.png)
+  ![Image 3 of application:](https://github.com/hlbrown/project-2-full-stack/blob/main/images/screenshots/Signup%20Page.png)
   
 
 
